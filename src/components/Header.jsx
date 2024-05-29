@@ -9,30 +9,30 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex justify-between w-full px-2 py-3 items-center relative shadow-sm">
+    <header className="w-full flex justify-between items-center px-2 py-3 md:px-10 relative shadow-sm">
       <div>
         <p className="text-3xl font-bold text-green-700">Furnit.</p>
       </div>
-      <div className="flex gap-4">
-        <navbar className="hidden">
-          <ul className="flex">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Contact</li>
+      <div className="flex md:justify-between items-center md:w-2/3">
+        <nav className="hidden md:block">
+          <ul className="flex gap-16">
+            <li className="hover:cursor-pointer">Home</li>
+            <li className="hover:cursor-pointer">Shop</li>
+            <li className="hover:cursor-pointer">About</li>
+            <li className="hover:cursor-pointer">Contact</li>
           </ul>
-        </navbar>
-        <section className="flex gap-4">
+        </nav>
+        <section className="flex gap-6 ml-5 mr-2">
           <IoSearchSharp size={20} />
           <GoPerson size={22} />
           <FiShoppingCart size={20} />
         </section>
-        <section className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <section className="md:hidden ml-4" onClick={() => setIsOpen(!isOpen)}>
           <RxHamburgerMenu size={23} />
         </section>
       </div>
       {isOpen && (
-        <navbar className="absolute w-full h-dvh top-0 bg-slate-900 left-0 text-white">
+        <nav className="absolute w-full h-dvh top-0 bg-slate-900 left-0 text-white">
           <MdClose
             size={30}
             className="ml-auto mr-5 mt-7"
@@ -44,7 +44,7 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
           </ul>
-        </navbar>
+        </nav>
       )}
     </header>
   );
