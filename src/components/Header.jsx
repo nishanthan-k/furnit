@@ -9,17 +9,17 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full flex justify-between items-center px-2 py-3 md:px-10 relative shadow-sm">
+    <header className="w-full h-20 md:h-24 flex justify-between items-center px-2 py-3 md:px-10 relative shadow-sm">
       <div>
-        <p className="text-3xl font-bold text-green-700">Furnit.</p>
+        <p className="text-3xl md:text-4xl font-bold text-green-700">Furnit.</p>
       </div>
       <div className="flex md:justify-between items-center md:w-2/3">
         <nav className="hidden md:block">
           <ul className="flex gap-16">
-            <li className="hover:cursor-pointer">Home</li>
-            <li className="hover:cursor-pointer">Shop</li>
-            <li className="hover:cursor-pointer">About</li>
-            <li className="hover:cursor-pointer">Contact</li>
+            <li className="hover:cursor-pointer md:text-lg">Home</li>
+            <li className="hover:cursor-pointer md:text-lg">Shop</li>
+            <li className="hover:cursor-pointer md:text-lg">About</li>
+            <li className="hover:cursor-pointer md:text-lg">Contact</li>
           </ul>
         </nav>
         <section className="flex gap-6 ml-5 mr-2">

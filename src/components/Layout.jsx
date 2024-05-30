@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const Layout = () => {
   return (
-    <main>
+    <main className="w-screen h-dvh">
       <Header />
       <Outlet />
       <Footer />
